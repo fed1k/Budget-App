@@ -3,8 +3,8 @@
 <%= render @entity %>
 
 <div>
-  <%= link_to "Edit this entity", edit_entity_path(@entity) %> |
-  <%= link_to "Back to entities", entities_path %>
+  <%= link_to "Edit this entity", edit_user_group_entity_path(@entity) %> |
+  <%= link_to "Back to entities", user_group_entities_path %>
 
-  <%= button_to "Destroy this entity", @entity, method: :delete %>
+  <%= button_to "Destroy this entity", user_group_entity_path(@entity), method: :delete %>
 </div>

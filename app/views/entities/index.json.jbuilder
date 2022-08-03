@@ -1,1 +1,3 @@
-json.array! @entities, partial: "entities/entity", as: :entity
+# frozen_string_literal: true
+
+json.array! @entities, partial: 'entities/entity', as: :entity

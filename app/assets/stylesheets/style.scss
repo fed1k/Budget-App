@@ -1,0 +1,269 @@
+@import "font-awesome";
+
+* {
+  margin: 0;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 50.400px);
+}
+
+nav {
+  background-color: #326bb0;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    color: white;
+  }
+}
+
+.navbar-text {
+  color: white;
+}
+
+i {
+  color: white;
+  flex: 1;
+  transform: scale(1.4);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#groups {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 1rem 3rem;
+}
+
+.category-card {
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 1rem;
+  display: flex;
+  gap: 10px;
+  border-radius: 6px;
+}
+
+.add-new-group-div {
+    background-color: #60b524;
+    padding: 1.2rem;
+    display: flex;
+
+    a {
+      border: 1px solid white;
+      flex: 1;
+      text-align: center;
+      padding: 0.8rem;
+      color: white;
+    }
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+}
+
+.category-div-name {
+  flex: 1;
+  padding-top: 10px;
+  opacity: 0.6;
+  font-size: 18px;
+}
+
+.transaction-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 0.8rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 6px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+
+.total-amount-text {
+  position: sticky;
+  top: 5px;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  border-radius: 14px;
+  font-size: 19px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+.transactions-container-div {
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.trans-date {
+  opacity: 0.5;
+}
+
+.trans-name {
+  font-size: 18px;
+}
+
+.splash-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  h1 {
+    flex: 0.5;
+    // font-size: 28px;
+  }
+
+  .login-text {
+    background-color: #3979C3FF;
+    padding: 0.7rem 1.2rem;
+    border-radius: 3px;
+    // width: 80%;
+    text-align: center;
+    color: #D2E8FAFF;
+  }
+
+  .sign-up-text {
+    color: #8C8E90FF;
+    padding: 0.7rem;
+  }
+}
+
+#transactions-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #60b524;
+  padding: 13px;
+  margin-top: 2rem;
+
+  form button {
+    background-color: transparent;
+    border: none;
+    flex: 1;
+  }
+
+  a,
+  form button {
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid white;
+    color: white;
+    font-size: 17px;
+  }
+
+  form {
+    text-align: center;
+    display: flex;
+  }
+}
+
+.total-amout-text {
+  font-size: 20px;
+  align-self: flex-end;
+  font-weight: bold;
+}
+
+.no-items-yet-text {
+  text-align: center;
+}
+
+.form-for-add-category {
+  display: flex;
+  flex-direction: column;
+}
+
+#user_name,
+#user_email,
+#user_password,
+#user_password_confirmation,
+.new-category-icon-field,
+.new-category-name-field,
+.add-entity-name,
+.add-entity-amount {
+  outline: none;
+  padding: 0.9rem 0 0.9rem 0.7rem;
+  border: 1px solid rgba(0, 0, 0, 0.190);
+
+  &::placeholder {
+    font-size: 15px;
+    opacity: 0.3;
+  }
+}
+
+.add-category-btn,
+.add-entity-btn {
+  padding: 0.6rem 0;
+  font-size: 17px;
+  border: none;
+  background-color: #326bb0;
+  color: white;
+}
+
+.new_user,
+.form-for-entity {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-btn,
+.login-btn {
+  background-color: #326bb0;
+  color: white;
+  border: none;
+  padding: 0.7rem 0;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 600px) {
+  .new-category-icon-field {
+    border-top: none;
+  }
+
+  #groups {
+    padding: 1rem 0;
+  }
+
+  #user_email,
+  #user_password,
+  #user_password_confirmation {
+    border-top: none;
+  }
+
+  .sign_in-page {
+    padding-top: 14px;
+  }
+
+  .forgot-password-btn,
+  .sign-up-btn {
+    text-align: center;
+    color: black;
+  }
+
+  .login-text {
+    width: 80%;
+    padding: 0.7rem;
+  }
+}

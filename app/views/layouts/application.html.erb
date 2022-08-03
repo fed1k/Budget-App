@@ -11,9 +11,25 @@
   </head>
 
   <body>
-    <% if user_signed_in? %>
-      <%=link_to "Sign out", destroy_user_session_path, method: :delete %>
-    <%end%>
-    <%= yield %>
+    <nav>
+      <% if request.path == "/users/sign_in" %>
+        <span class="navbar-text">LOGIN</span>
+      <% elsif request.path == "/users/sign_up" %>
+        <a class="back" href="/users/sign_in"><i class="fa fa-angle-left"></i></a>
+        <span class="navbar-text">REGISTER</span>
+      <% elsif request.path == "/users/#{params[:user_id]}/groups/#{params[:id]}" %>
+        <a class="back" href="/users/<%=params[:user_id]%>/groups"><i class="fa fa-angle-left"></i></a>
+        <span class="navbar-text">TRANSACTIONS</span>
+      <%else%>
+        <a class="back" href="/users/sign_in"><i class="fa fa-angle-left"></i></a>
+        <span class="navbar-text">CATEGORIES </span>
+      <%end%>
+      <%if user_signed_in? %>
+        <%=link_to "SIGN OUT", destroy_user_session_path, class: "lolo", method: :delete %>
+      <%end%>
+    </nav>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
