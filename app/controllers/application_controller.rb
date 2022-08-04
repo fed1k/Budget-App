@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
@@ -8,11 +10,12 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
   def authenticate_user!
     if user_signed_in?
       super
-    else
-      redirect_to splash_path if request.original_fullpath != splash_path
+    elsif request.original_fullpath != splash_path
+      redirect_to splash_path
     end
   end
 end
