@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
+    redirect_to user_groups_path(current_user.id)
     @users = User.all
   end
 
