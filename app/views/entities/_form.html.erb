@@ -13,7 +13,7 @@
 
   <%= form.text_field :name, placeholder: "Name", class: "add-entity-name" %>
 
-  <%= form.text_field :amount, placeholder: "Amount", class: "add-entity-amount" %>
+  <%= form.number_field :amount, placeholder: "Amount", class: "add-entity-amount" %>
 
   <%= form.submit "Add transaction", class: "add-entity-btn" %>
 <% end %>
