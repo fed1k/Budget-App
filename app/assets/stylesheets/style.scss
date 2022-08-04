@@ -26,7 +26,7 @@ nav {
 }
 
 .navbar-text {
-  color: #D2E1EBFF;
+  color: #d2e1ebff;
 }
 
 i {
@@ -49,7 +49,7 @@ i {
 .category-card {
   color: black;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
   padding: 1rem;
   display: flex;
   gap: 10px;
@@ -57,17 +57,17 @@ i {
 }
 
 .add-new-group-div {
-    background-color: #60b524;
-    padding: 1.2rem;
-    display: flex;
+  background-color: #60b524;
+  padding: 1.2rem;
+  display: flex;
 
-    a {
-      border: 1px solid white;
-      flex: 1;
-      text-align: center;
-      padding: 0.8rem;
-      color: white;
-    }
+  a {
+    border: 1px solid white;
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem;
+    color: white;
+  }
 }
 
 img {
@@ -87,7 +87,7 @@ img {
   display: flex;
   justify-content: space-between;
   padding: 1.2rem 0.8rem;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0, 0, 0, 0.08) 0 0 0 1px;
   border-radius: 6px;
 
   div {
@@ -101,7 +101,6 @@ img {
   position: sticky;
   top: 5px;
   padding: 12px;
-  // background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   border-radius: 14px;
   font-size: 19px;
@@ -139,16 +138,15 @@ img {
   }
 
   .login-text {
-    background-color: #3979C3FF;
+    background-color: #3979c3ff;
     padding: 0.7rem 1.2rem;
     border-radius: 3px;
-    // width: 80%;
     text-align: center;
-    color: #D2E8FAFF;
+    color: #d2e8faff;
   }
 
   .sign-up-text {
-    color: #8C8E90FF;
+    color: #8c8e90ff;
     padding: 0.7rem;
   }
 }
