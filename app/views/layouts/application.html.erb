@@ -14,15 +14,18 @@
     <nav>
       <% if request.path == "/users/sign_in" %>
         <a class="back" href="/splash"><i class="fa fa-angle-left"></i></a>
-        <span class="navbar-text" style="flex: 0.5;">LOGIN</span>
+        <span class="navbar-text" style="flex: 0.560;">LOGIN</span>
       <% elsif request.path == "/users/sign_up" %>
         <a class="back" href="/splash"><i class="fa fa-angle-left"></i></a>
-        <span class="navbar-text">REGISTER</span>
+        <span class="navbar-text", style="flex: 0.560;">REGISTER</span>
       <% elsif request.path == "/users/#{params[:user_id]}/groups/#{params[:id]}" %>
         <a class="back" href="/users/<%=params[:user_id]%>/groups"><i class="fa fa-angle-left"></i></a>
         <span class="navbar-text">TRANSACTIONS</span>
       <% elsif request.path == "/splash" %>
         <span style="text-align: center; flex: 1; color: #D2E1EBFF;">WELCOME</span>
+      <% elsif request.path == "/users/4/groups/26/entities/new" %>
+        <a class="back" href="/users/<%=params[:user_id]%>/groups/<%= params[:group_id]%>"><i class="fa fa-angle-left"></i></a>
+        <span style="text-align: center; flex: 1; color: #D2E1EBFF;">NEW TRANSACTION</span>
       <%else%>
         <a class="back" href="/users/sign_in"><i class="fa fa-angle-left"></i></a>
         <span class="navbar-text">CATEGORIES </span>

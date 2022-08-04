@@ -2,7 +2,7 @@
 
 * {
   margin: 0;
-  font-family: sans-serif;
+  font-family: cursive;
   text-decoration: none;
 }
 
@@ -26,7 +26,7 @@ nav {
 }
 
 .navbar-text {
-  color: white;
+  color: #D2E1EBFF;
 }
 
 i {
@@ -101,13 +101,15 @@ img {
   position: sticky;
   top: 5px;
   padding: 12px;
-  background-color: rgba(255, 255, 255, 0.8);
+  // background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   border-radius: 14px;
   font-size: 19px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   font-weight: bold;
   align-self: flex-end;
+  background-color: #1a652a;
+  color: white;
 }
 
 .transactions-container-div {
@@ -134,7 +136,6 @@ img {
 
   h1 {
     flex: 0.5;
-    // font-size: 28px;
   }
 
   .login-text {
@@ -206,11 +207,7 @@ img {
   outline: none;
   padding: 0.9rem 0 0.9rem 0.7rem;
   border: 1px solid rgba(0, 0, 0, 0.190);
-
-  &::placeholder {
-    font-size: 15px;
-    opacity: 0.3;
-  }
+  font-size: 17px;
 }
 
 .add-category-btn,
