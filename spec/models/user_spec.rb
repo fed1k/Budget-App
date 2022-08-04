@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 RSpec.describe 'User', type: :model do
   subject do
     User.new(name: 'Fed', id: 1, email: 'faky@mail.ru', created_at: '2020', updated_at: '2021', password: '1234567')

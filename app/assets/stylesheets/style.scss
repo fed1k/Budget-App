@@ -10,7 +10,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: calc(100vh - 50.400px);
+  min-height: calc(100vh - 50px);
 }
 
 nav {
@@ -104,7 +104,7 @@ img {
   text-align: center;
   border-radius: 14px;
   font-size: 19px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
   font-weight: bold;
   align-self: flex-end;
   background-color: #1a652a;
@@ -204,7 +204,7 @@ img {
 .add-entity-amount {
   outline: none;
   padding: 0.9rem 0 0.9rem 0.7rem;
-  border: 1px solid rgba(0, 0, 0, 0.190);
+  border: 1px solid rgba(0, 0, 0, 0.19);
   font-size: 17px;
 }
 
