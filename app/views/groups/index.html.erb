@@ -1,5 +1,5 @@
 <div id="groups">
-  <span class="total-amount-text">Total amount $<%= Entity.all.sum(:amount)%></span>
+  <span class="total-amount-text">Total amount $<%= Entity.where(user_id: current_user.id).sum(:amount)%></span>
     <% if @groups.length == 0 %>
       <h2 class="no-items-yet-text">No groups yet😢</h2>
     <%end%>
