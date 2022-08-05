@@ -1,0 +1,13 @@
+<div id="groups">
+  <span class="total-amount-text">Total amount $<%= Entity.where(user_id: current_user.id).sum(:amount)%></span>
+    <% if @groups.length == 0 %>
+      <h2 class="no-items-yet-text">No groups yet😢</h2>
+    <%end%>
+  <% @groups.each do |group| %>
+    <%= render group if group.user_id == current_user.id%>
+  <% end %>
+</div>
+
+<div class="add-new-group-div">
+  <%= link_to "NEW GROUP", new_user_group_path(current_user.id) %>
+</div>

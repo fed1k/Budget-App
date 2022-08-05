@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @group %>
+
+
+<div class="transactions-container-div">
+  <% @entities.each do |i| %>
+      <div class="transaction-div">
+        <div>
+          <span class="trans-name"><%= i.name %></span>
+          <span class="trans-date"><%= i.created_at.strftime('%d %b %Y at %H:%M:%S')%></span>
+        </div>
+        <span><b>$<%= i.amount %></b></span>
+      </div>
+  <% end %>
+</div>
+
+<div id="transactions-container">
+  <%= link_to "Edit this group", edit_user_group_path(@group) %>
+  <%# <%= link_to "Back to groups", user_groups_path %>
+
+  <%= button_to "Destroy this group", user_group_path, method: :delete %>
+  <%= link_to "Add new transaction", new_user_group_entity_path(params[:user_id], params[:id]) %>
+</div>

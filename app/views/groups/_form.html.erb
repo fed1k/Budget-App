@@ -1,0 +1,25 @@
+<%= form_with model: group, url: "/users/#{current_user.id}/groups", class: "form-for-add-category" do |form| %>
+  <% if group.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+        <% group.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%# <div> %>
+    <%= form.text_field :name, placeholder: "Name", class: "new-category-name-field" %>
+  <%# </div> %>
+
+  <%# <div> %>
+    <%= form.text_field :icon, placeholder: "Type category icon name", class: "new-category-icon-field" %>
+  <%# </div> %>
+
+  <%# <div> %>
+    <%= form.submit "Add Category", class: "add-category-btn" %>
+  <%# </div> %>
+<% end %>
